@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59a400c2-ab5e-442e-baeb-f966027a5ee6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/bancodao/.env" beforeDir="false" afterPath="$PROJECT_DIR$/bancodao/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bancodao/src/main/java/com/ucentral/bancodao/config/ExceptionHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bancodao/src/main/java/com/ucentral/bancodao/config/ModelMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bancodao/src/main/java/controladores/ControladorUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bancodao/src/main/java/dto/UsuarioDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bancodao/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bancodao/src/main/resources/templates/usuario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bancodao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bancodao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bancodao/src/main/java/com/ucentral/bancodao/BancodaoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bancodao/src/main/java/com/ucentral/bancodao/BancodaoApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +31,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "cu12registro",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ejercicios-banco" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ejercicios-banco" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
 </project>
