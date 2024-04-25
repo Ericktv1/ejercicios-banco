@@ -4,23 +4,25 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "USUARIOS") // Cambio de nombre de tabla
+@Entity(name="Usuario")
+@Table(name = "USUARIOS_REL") // Cambio de nombre de tabla
+@ToString
 public class Usuario implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_USUARIO")
-    @SequenceGenerator(name = "SEQ_USUARIO", sequenceName = "SEQ_USUARIO", allocationSize = 1)
-    @Column(name = "ID_USUARIO") // Cambio de nombre de columna y eliminación de nullable
-    private long idUsuario;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_USUARIO_REL")
+    @SequenceGenerator(name = "SEQ_USUARIO_REL", sequenceName = "SEQ_USUARIO_REL", allocationSize = 1)
+    @Column(name = "USU_ID_USUARIO", nullable = false)
+    private long serial;
 
-    @Column(name = "NOMBRE_USUARIO", nullable = false) // Cambio de nombre de columna y eliminación de nullable
+    @Column(name = "USU_NOMBRE", nullable = false)
     private String nombreUsuario;
 
-    @Column(name = "CONTRASENA", nullable = false) // Cambio de nombre de columna y eliminación de nullable
+    @Column(name = "USU_CONTRASENA", nullable = false)
     private String contrasena;
 }
