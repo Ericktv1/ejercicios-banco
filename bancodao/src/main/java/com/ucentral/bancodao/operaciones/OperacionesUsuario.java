@@ -1,11 +1,8 @@
 package com.ucentral.bancodao.operaciones;
 
 
-import dto.UsuarioDto;
-import dto.UsuarioDto;
-
-import java.util.List;
+import com.ucentral.bancodao.entidades.Usuario;
 
 public interface OperacionesUsuario {
-    UsuarioDto crear(UsuarioDto usuario);
+public Usuario crear(Usuario usuario);
 }
