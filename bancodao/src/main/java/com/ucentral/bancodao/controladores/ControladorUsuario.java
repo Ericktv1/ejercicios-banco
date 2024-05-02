@@ -15,8 +15,8 @@ import java.util.logging.Logger;
 
 
 public class ControladorUsuario {
-@Autowired
+    @Autowired
     ServicioUsuario servicioUsuario;
 
-public void crearUsuario(Usuario usuario){servicioUsuario.crear(usuario);}
+    public void crearUsuario(Usuario usuario){servicioUsuario.crear(usuario);}
 }
