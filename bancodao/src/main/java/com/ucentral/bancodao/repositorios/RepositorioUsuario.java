@@ -1,13 +1,10 @@
 package com.ucentral.bancodao.repositorios;
 
 import com.ucentral.bancodao.entidades.Usuario;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
-@Repository
-public interface RepositorioUsuario extends CrudRepository<Usuario, Integer>{
+public interface RepositorioUsuario extends JpaRepository<Usuario, Integer> {
 
-
-
-    }
-
+}
