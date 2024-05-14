@@ -29,14 +29,7 @@ public class ControladorUsuario {
         return "formcrearusuario";
     }
 
-    @GetMapping({"/usuario/iniciar"})
-    public String iniciarUsuario(Model model){
-        Usuario usuariollenar= new Usuario();
 
-        model.addAttribute("usuariollenar",usuariollenar);
-        System.out.println("PAso por aca formulario");
-        return "formcrearusuario";
-    }
 
 
     @PostMapping({"/accioncrear"})

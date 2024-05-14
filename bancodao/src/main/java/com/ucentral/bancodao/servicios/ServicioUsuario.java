@@ -25,8 +25,6 @@ public class ServicioUsuario implements OperacionesUsuario {
 
         return repositorioUsuario.save(usuario);
     }
-    public boolean existeUsuario(Integer codigo){
-        return repositorioUsuario.existsById(codigo);
-    }
-    }
 
+
+}
