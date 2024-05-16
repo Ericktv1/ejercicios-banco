@@ -13,9 +13,10 @@ import java.io.Serializable;
 @ToString
 public class Usuario implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "USU_CODIGO", nullable = false)
-    private int codigo;
+
+    @SequenceGenerator(name="SEQ_USU_REL",sequenceName = "SEQ_USU_REL",allocationSize = 1)
+    @Column(name = "cedula", nullable = false)
+    private int cedula;
 
     @Column(name = "USU_NOMBRE", nullable = false)
     private String nombreUsuario;
@@ -26,8 +27,6 @@ public class Usuario implements Serializable {
     @Column(name = "USU_TELEFONO", nullable = false)
     private String telefonoUsuario;
 
-    @Column(name = "USU_CONTRASENA", nullable = false)
-    private String contrasena;
 
     }
 

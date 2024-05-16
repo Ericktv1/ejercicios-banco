@@ -1,6 +1,7 @@
 package com.ucentral.bancodao.controladores;
 
 import com.ucentral.bancodao.entidades.Usuario;
+import com.ucentral.bancodao.operaciones.OperacionesUsuario;
 import com.ucentral.bancodao.servicios.ServicioUsuario;
 
 import lombok.extern.log4j.Log4j2;
@@ -17,28 +18,30 @@ import java.util.logging.Logger;
 @Controller
 public class ControladorUsuario {
     @Autowired
-    ServicioUsuario servicioUsuario;
+    private OperacionesUsuario operacionesUsuario;
 
 
     @GetMapping({"/usuario/nuevo"})
-    public String cargarUsuario(Model model){
-        Usuario usuariollenar= new Usuario();
+    public String cargarUsuario(Model model) {
+        Usuario usuariollenar = new Usuario();
 
-        model.addAttribute("usuariollenar",usuariollenar);
+        model.addAttribute("usuariollenar", usuariollenar);
         System.out.println("PAso por aca formulario");
         return "formcrearusuario";
     }
 
-
+    @GetMapping({"/usuario/iniciarsesion"})
+    public String iniciarUsuario(Model model) {
+        System.out.println("Paso por aca para iniciar");
+        return "iniciarsesionUsuario";
+    }
 
 
     @PostMapping({"/accioncrear"})
-    public String accioncrear(@ModelAttribute("usuariollenar")Usuario usuario){
+    public String accioncrear(@ModelAttribute("usuariollenar") Usuario usuario) {
         System.out.println("Paso por aca para guardar formulario");
         System.out.println(usuario);
-        this.servicioUsuario.crear(usuario);
+        operacionesUsuario.crear(usuario);
         return "redirect:http://localhost:8862/";
     }
-    public void crearUsuario(Usuario usuario){servicioUsuario.crear(usuario);}
-
 }

@@ -25,6 +25,8 @@ public class ServicioUsuario implements OperacionesUsuario {
 
         return repositorioUsuario.save(usuario);
     }
+    @Override
+    public Usuario findByNombreUsuario(String nombreUsuario){return repositorioUsuario.findByNombreUsuario(nombreUsuario);}
 
 
 }

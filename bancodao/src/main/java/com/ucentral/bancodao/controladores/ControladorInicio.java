@@ -5,25 +5,29 @@ import com.ucentral.bancodao.servicios.ServicioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
+
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ControladorInicio {
     @Autowired
-    ServicioUsuario servicioUsuario;
-    @GetMapping({"/usuario/iniciarsesion"})
-    public String iniciarUsuario(Model model){
-        Usuario usuariollenar= new Usuario();
+    private ServicioUsuario servicioUsuario;
 
-        model.addAttribute("usuariollenar",usuariollenar);
-        System.out.println("Paso por aca para iniciar");
-        return "iniciarsesionUsuario";
+    @GetMapping("/validacion")
+    public String validar(){return "index";}
+    @PostMapping ("/inicio")
+    public String iniciosesion(@RequestParam String nombreUsuario, @RequestParam int password, Model modelo){
+        Usuario usuario= servicioUsuario.findByNombreUsuario(nombreUsuario);
+        if(usuario!=null && usuario.getCedula()==password){
+            return "listaTransacciones";
+        }
+        else {
+            return "index";
+        }
+
     }
-
 
 
 }
