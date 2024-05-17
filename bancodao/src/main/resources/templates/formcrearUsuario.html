@@ -18,7 +18,7 @@
                     <input id="nombreUsuario" type="text" class="form-control" th:field="*{nombreUsuario}" required autofocus>
                 </div>
                 <div class="form-group">
-                    <label for="cedula">Cedula de Ciudadania (Recordar que esta será su contraseña)</label>
+                    <label for="cedula">Cedula de Ciudadania </label>
                     <input type="text" name="cedula" class="form-control" th:field="*{cedula}" id="cedula" placeholder="Ingrese cedula" required autofocus="autofocus">
                 </div><br>
                 <div class="mb-3">
@@ -28,6 +28,10 @@
                 <div class="mb-3">
                     <label for="telefonoUsuario" class="form-label">Telefono:</label>
                     <input id="telefonoUsuario" type="text" class="form-control" th:field="*{telefonoUsuario}" required autofocus>
+                </div>
+                <div class="mb-3">
+                    <label for="contrasena" class="form-label">Contraseña:</label>
+                    <input id="contrasena" type="text" class="form-control" th:field="*{contrasena}" required autofocus>
                 </div>
 
 

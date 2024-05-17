@@ -10,17 +10,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Objects;
+
 @Controller
 public class ControladorInicio {
     @Autowired
     private ServicioUsuario servicioUsuario;
 
-    @GetMapping("/validacion")
-    public String validar(){return "index";}
+
     @PostMapping ("/inicio")
-    public String iniciosesion(@RequestParam String nombreUsuario, @RequestParam int password, Model modelo){
+    public String iniciosesion(@RequestParam String nombreUsuario, @RequestParam String password, Model modelo){
         Usuario usuario= servicioUsuario.findByNombreUsuario(nombreUsuario);
-        if(usuario!=null && usuario.getCedula()==password){
+        if(usuario!=null && Objects.equals(usuario.getContrasena(), password)){
             return "listaTransacciones";
         }
         else {
