@@ -28,5 +28,8 @@ public class Tarjeta_De_Credito {
     @Column(name = "TAR_BLOQUEADA", nullable = false)
     private boolean bloqueada;
 
+    @OneToOne
+    @JoinColumn(name = "SOL_CODIGO", nullable = false)
+    private Solicitud solicitud;
     //merge develop
 }
